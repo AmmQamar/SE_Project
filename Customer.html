@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer side</title>
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS 5-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	 <script src="https://kit.fontawesome.com/2109c5017c.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	 <script src="https://kit.fontawesome.com/2109c5017c.js" crossorigin="anonymous"></script>
+
+	 <script>
+	 	 $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      })
+	 </script>
+	 <style type="text/css">
+	 	.navbar-brand {
+  letter-spacing: 3px;
+  color: #808080;
+}
+.panel{
+	padding: 5px;
+  text-align: center;
+  color: #800080;
+  background-color: #e6e6e6;
+  border: solid 1px #c3c3c3;
+}
+.headings{
+	margin-left: 30px;
+	font-size: 30px;
+	font-weight: bold;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+	height: 55px;
+  width: 55px;
+  outline: #800080;
+  background-size: 100%, 100%;
+  border-radius: 10%;
+  border: 1px solid #800080;
+  background-image: none;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 30px;
+  color: #800080;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 30px;
+  color: #800080;
+}
+	.card-pair{
+	padding: 3px;
+	margin: 0px 40px;
+	
+
+}
+.card{
+	
+	margin-bottom: 8px;
+	border: 3px solid #800080;
+
+}
+.card-header{
+
+	  height: 220px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: none;
+      background-position: center;
+}
+.main_image{
+	display: block;
+    max-width:100%;
+    max-height:180px;
+    
+    height: auto;
+}
+
+.List1{
+text-decoration: none;
+color:black;
+
+}
+.fCard{
+	background-color: #ffe6f2;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #800080;
+         color: white;
+}
+.tableBorder{
+	border: solid 10px #c3c3c3;
+	margin: 10px;
+}
+.AllInputs{
+	width: 80%;
+	text-align: center;
+    border: 2px solid #800080;
+  border-radius: 20px;
+}
+.myCard{
+	border: 5px solid #800080;
+  border-radius: 30px;
+  padding: 5px;
+  text-align: center;
+  margin:5px;
+  background-color: #ffe6f2;
+}
+.btn-outline-dark{
+	margin-top: 10px;
+
+}
+.btn-outline-dark:hover{
+	background-color: #800080;
+	color: white;
+}
+
+.CurButton{
+	text-align: center;
+}
+
+
+.footer-16371 {
+  padding: 7rem 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #781C68; }
+  .footer-16371 .footer-site-logo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700; }
+    .footer-16371 .footer-site-logo a {
+      color: white; }
+  .footer-16371 .nav-links {
+    padding: 0;
+    margin: 0; }
+    .footer-16371 .nav-links li {
+      display: inline-block; }
+      .footer-16371 .nav-links li a {
+        padding: 10px;
+        color: white; }
+        .footer-16371 .nav-links li a:hover {
+          color: #4200ff; }
+  .footer-16371 .social h3 {
+    font-weight: bold;
+    font-size: 18px;
+    color: white; }
+  .footer-16371 .social ul li {
+    display: inline-block; }
+    .footer-16371 .social ul li a {
+      display: inline-block;
+      padding: 10px; }
+    .footer-16371 .social ul li.in a {
+      color: #df588a; }
+    .footer-16371 .social ul li.tw a {
+      color: #15b8ff; }
+    .footer-16371 .social ul li.fb a {
+      color: #3742d0; }
+    .footer-16371 .social ul li.dr a {
+      color: #fa38c1; }
+    .footer-16371 .social ul li.pin a {
+      color: #dd4d5a; }
+  .footer-16371 .copyright {
+    color: #999999; }
+.butt{
+	text-align: center;
+	margin:5px;
+
+}
+.paragraph{
+	margin: 10px;
+	padding: 10px;
+	font-size: 20px;
+	color: #800080;
+}
+ .book{
+ 	text-align: center;
+ }
+.AllInputs{
+	width: 80%;
+	text-align: center;
+    border: 2px solid #800080;
+  border-radius: 10px;
+  font-size: 15px;
+
+}
+.Alllables{
+ color: #800080;
+}  
+.btn-outline-dark{
+	margin-top: 10px;
+
+}
+.btn-outline-dark:hover{
+	background-color: #800080;
+	color: white;
+}
+	 </style>
+</head>
+<body>
+	<div style="background: url(https://images.pexels.com/photos/6050/nature-bird-people-grass.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)" class="jumbotron bg-cover text-white">
+    <div class="container py-5 text-center">
+        <h1 class="display-3 font-weight-bold">Park Managemnt system(Customer side)</h1>
+        <p class="font-italic mb-0">This project is all about managing a whole amusement park and its working parts on a single software. This Management system takes all the important component of an Amusement park and put them in one place so anyone who is coming in the park as a customer or as a staff member can use it and get all the important info on their mobile or laptop screen.</p>
+        
+        
+    </div>
+</div>
+   
+	
+<div class="List1 " >
+
+  
+   
+  <center><h2 style="color:#800080">Ticket</h2></center>
+<section> 
+       <div class="row card-pair">
+		<div class="col-lg-3 col-md-4 col-sm-6">
+			<a href="#">
+			<div class="card">
+				<div class="card-header fCard " style="background-image: url(https://media.istockphoto.com/photos/numbers-200-3d-picture-id1212534932?k=20&m=1212534932&s=612x612&w=0&h=ovV2YAm1IDZnoKQMFREGGh6POLHNAmlrNDwRw3It-p0=);">
+					
+				</div>
+				<div class="card-body fCard">
+					<strong><p>minimum offer</p></strong>
+					<p><strong>Price:</strong>200 <strong>PKR</strong></p>
+					
+				</div>
+			</div>
+			</a>
+		</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 card4 ">
+			<div class="card">
+				<div class="card-header fCard" style="background-image: url(https://media.istockphoto.com/photos/number-400-picture-id532700635?k=20&m=532700635&s=612x612&w=0&h=kcMY2tFKb8J0FF_WZeGZF9es314M6Cg4XJoDmOurRNs=);">
+					 
+				</div>
+				<div class="card-body fCard ">
+					<strong><p>Offer 2</p></strong>
+					<p><strong>Price:</strong>400 <strong>PKR</strong></p>
+
+				</div>
+			</div>
+		</div>
+			<div class="col-lg-3 col-md-4 card3 card4">
+			<div class="card block-sm-down ">
+				<div class="card-header fCard" style="background-image: url(https://media.istockphoto.com/photos/five-hundred-3d-illustration-golden-number-500-on-white-background-picture-id1210895023?k=20&m=1210895023&s=612x612&w=0&h=LVcn1FZP-LQIoLOCwxK1j4DOBECIiJAG5ZJArWEwU7I=);">
+					
+				</div>
+				<div class="card-body fCard">
+					<strong><p>offer 3</p></strong>
+					<p><strong>Price:</strong>500 <strong>PKR</strong></p>
+				</div>
+			</div>
+		</div>
+				
+			<div class="col-lg-3 col-md-4 card3 card4">
+			<div class="card block-sm-down ">
+				<div class="card-header fCard" style="background-image: url(https://media.istockphoto.com/photos/1k-picture-id1172405781?k=20&m=1172405781&s=612x612&w=0&h=Co4PwAHcFvYH3vKbE6XGOKQ6w4o3n6hiWoRSmdd-Eh0=);">
+					
+				</div>
+				<div class="card-body fCard">
+					<strong><p>Offer 4</p></strong>
+					<p><strong>Price:</strong>1000 <strong>PKR</strong></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+      </section>
+</div>
+</div> 
+
+
+ 
+
+<div class="List1" >
+
+   <center><h2 style="color:#800080">Token</h2></center>
+  <div id="TokenCarousel" class="carousel slide" data-bs-ride="carousel">
+  
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+  
+<section> 
+       <div class="row card-pair">
+		<div class="col-lg-3 col-md-4 col-sm-6">
+			<a href="#">
+			<div class="card">
+				<div class="card-header fCard " style="background-image: url(https://media.istockphoto.com/photos/3d-number-500-gold-picture-id613032102?k=20&m=613032102&s=612x612&w=0&h=sA8FM-uQDvzxH8BfaqcAYAGaQwcbMeUU8oPymEAWbmU=);">
+					
+				</div>
+				<div class="card-body fCard">
+					<strong><p>ID:AQA365</p></strong>
+					<p><strong>Price:</strong>500 <strong>PKR</strong></p>
+					
+				</div>
+			</div>
+			</a>
+		</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 card4 ">
+			<div class="card">
+				<div class="card-header fCard" style="background-image: url(https://media.istockphoto.com/photos/one-thousand-friends-or-followers-social-media-notification-with-picture-id1139224279?k=20&m=1139224279&s=612x612&w=0&h=YuWsvmsTau986ETZ1rstRNzhhqR85LrcG7rIIOdKxR8=);">
+					 
+				</div>
+				<div class="card-body fCard ">
+					<strong><p>AQA369</p></strong>
+					<p><strong>Price:</strong>1000 <strong>PKR</strong></p>
+
+				</div>
+			</div>
+		</div>
+			<div class="col-lg-3 col-md-4 card3 card4">
+			<div class="card block-sm-down ">
+				<div class="card-header fCard" style="background-image: url(https://media.istockphoto.com/photos/number-1500-on-the-floor-picture-id478469387?k=20&m=478469387&s=612x612&w=0&h=RXqovCG8S2Og3mYiEZ0PC901avsfBvyeDTpkkL7V65k=);">
+	
+				</div>
+				<div class="card-body fCard">
+					<strong><p>AQA458</p></strong>
+					<p><strong>Price:</strong>1500 <strong>PKR</strong></p>
+				</div>
+			</div>
+		</div>
+				
+			<div class="col-lg-3 col-md-4 card3 card4">
+			<div class="card block-sm-down ">
+				<div class="card-header fCard" style="background-image: url(https://media.istockphoto.com/photos/2000s-computer-poster-picture-id1356850825?k=20&m=1356850825&s=612x612&w=0&h=YUITnmV1loWG7Fpq4IHZIQXTUvvB5I6zRXQHaSvBX0o=);">
+	
+				</div>
+				<div class="card-body fCard">
+					<strong><p>AQA564</p></strong>
+					<p><strong>Price:</strong>2000 <strong>PKR</strong></p>
+				</div>
+			</div>
+		</div>
+	</div>
+      </section>
+</div>
+<div class="carousel-item ">
+  
+<section> 
+       <div class="row card-pair">
+		<div class="col-lg-3 col-md-4 col-sm-6">
+			<a href="#">
+			<div class="card">
+				<div class="card-header fCard " style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT552MN7Zii9QUQ82kN4A8t3v5neRkwaDS57g&usqp=CAU);">
+					
+				</div>
+				<div class="card-body fCard">
+					<strong><p>AAQ589</p></strong>
+					<p><strong>Price:</strong>2500 <strong>PKR</strong></p>
+					
+				</div>
+			</div>
+			</a>
+		</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 card4 ">
+			<div class="card">
+				<div class="card-header fCard" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBuVwB6X48FZfFuYMsxf3CpU_2dsIbTKNOYg&usqp=CAU);">
+					 
+				</div>
+				<div class="card-body fCard ">
+					<strong><p>AAQ547</p></strong>
+					<p><strong>Price:</strong>3000 <strong>PKR</strong></p>
+
+				</div>
+			</div>
+		</div>
+			<div class="col-lg-3 col-md-4 card3 card4">
+			<div class="card block-sm-down ">
+				<div class="card-header fCard" style="background-image: url(https://st2.depositphotos.com/3897335/6135/i/950/depositphotos_61359775-stock-photo-number-4000.jpg);">
+					
+				</div>
+				<div class="card-body fCard">
+					<strong><p>AAQ222(Awsome)</p></strong>
+					<p><strong>Price:</strong>4000 <strong>PKR</strong></p>
+				</div>
+			</div>
+		</div>
+				
+			<div class="col-lg-3 col-md-4 card3 card4">
+			<div class="card block-sm-down ">
+				<div class="card-header fCard" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTukh3jydySAdVSyyJo32jKyDYecSUENOzXUg&usqp=CAU);">
+					
+
+				</div>
+				<div class="card-body fCard">
+					<strong><p>AAQ666(Awasome)</p></strong>
+					<p><strong>Price:</strong>5000 <strong>PKR</strong></p>
+				</div>
+			</div>
+		</div>
+	</div>
+      </section>
+      
+</div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#TokenCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon butt" aria-hidden="true"></span>
+    <span class="visually-hidden butt">Previous</span>
+  </button>
+  <button class="carousel-control-next " type="button" data-bs-target="#TokenCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon butt" aria-hidden="true"></span>
+    <span class="visually-hidden butt">Next</span>
+  </button>
+</div>
+
+</div>
+<!--Food items -->
+<div class="tableBorder">
+<center><h2 style="color:#800080">Food items</h2></center>
+<div class="panel">
+<table>
+  <tr>
+  	<th>#</th>
+    <th>Name</th>
+    <th>Amount</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+      <th scope="row">1</th>
+      <td>item1</td>
+      <td>450</td>
+      <td>5000</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>item2</td>
+      <td>4508</td>
+      <td>1235</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>item3</td>
+      <td>45</td>
+      <td>3999</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>item4</td>
+      <td>299</td>
+      <td>2000</td>
+    </tr>
+     <tr>
+      <th scope="row">5</th>
+      <td>item5</td>
+      <td>254</td>
+      <td>3250</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>item6</td>
+      <td>333</td>
+      <td>350</td>
+    </tr>
+   <tr>
+      <th scope="row">7</th>
+      <td>item7</td>
+      <td>254</td>
+      <td>870</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>item8</td>
+      <td>251</td>
+      <td>214</td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>item9</td>
+      <td>254</td>
+      <td>3250</td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td>item10</td>
+      <td>25</td>
+      <td>1200</td>
+    </tr>
+</table>
+
+<div class="butt">
+<a class="btn btn-outline-dark" href="Food_items.html">view All</a>
+</div>
+</div>
+</div>
+
+<!--Gift stall -->
+<div class="tableBorder">
+<center><h2 style="color:#800080">Gift Stall</h2></center>
+<div class="panel">
+<table>
+  <tr>
+  	<th>#</th>
+    <th>Name</th>
+    <th>Amount</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+      <th scope="row">1</th>
+      <td>item1</td>
+      <td>450</td>
+      <td>5000</td>
+    </tr>
+    <tr >
+      <th scope="row">2</th>
+      <td>item2</td>
+      <td>4508</td>
+      <td>1235</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>item3</td>
+      <td>45</td>
+      <td>3999</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>item4</td>
+      <td>299</td>
+      <td>2000</td>
+    </tr>
+     <tr>
+      <th scope="row">5</th>
+      <td>item5</td>
+      <td>254</td>
+      <td>3250</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>item6</td>
+      <td>333</td>
+      <td>350</td>
+    </tr>
+   <tr>
+      <th scope="row">7</th>
+      <td>item7</td>
+      <td>254</td>
+      <td>870</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>item8</td>
+      <td>251</td>
+      <td>214</td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>item9</td>
+      <td>254</td>
+      <td>3250</td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td>item10</td>
+      <td>25</td>
+      <td>1200</td>
+    </tr>
+
+</table>
+    <div class="butt">
+<a class="btn btn-outline-dark" href="Giftstall.html">view All</a>
+</div>
+</div>
+</div>
+<!--Booking -->
+<div class="tableBorder">
+	<center><h2 style="color:#800080">Booking</h2></center>
+	<p class="paragraph">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAre you tired of standing in long queues for tickets and tokens?
+Then don't worry, we got your back. With this feature, you can book a ticket or tokens for your favourite ride and arcade games from your mobile. All you have to do is select the details of the ride, the number of tickets, add your buying details, confirm and voila! you got your tickets with a single click. You can also book the whole ride for yourself to make your experience even more memorable with your loved ones.</p>
+<div class="butt">
+	<!-- Booking with ticket modal -->
+	<div class="container book">
+  <!-- Button to Open the Modal 
+  -->
+  <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#Booking">
+    Use ticket or Token
+  </button>
+  <!-- The Modal -->
+  <center>
+  <div class="modal fade " id="Booking">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center><h4 class="modal-title">Get Ride or play game using ticket or token</h4></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        	<i class="fas fa-ticket-alt fa-5x op-pic" style="color: #800080;"></i>
+           <h5 class="title">Ride or Game with ticket</h5>
+           <label class="Alllables">Enter Full name</label><br>
+           <input type="text" name="name" class="AllInputs"><br>
+           <label class="Alllables">Enter Ride or Game Name</label><br>
+           <input type="text" name="name" class="AllInputs"><br>
+    		<label class="Alllables">Ticket OR Token (ID) s</label><br>
+    		<input type="text" name="id" class="AllInputs"><br>
+    		
+    		<button class="btn btn-outline-dark">Conform</button>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  </center>
+  
+</div>
+</div>
+
+
+<!--Complain -->
+<div class="tableBorder">
+	<center><h2 style="color:#800080">Complain</h2></center>
+	<textarea id="owner" rows="06" style="width: 100%;">
+    </textarea>
+    <center><a href ="mailto:f2019266347@umt.edu.pk;F2019266311@umt.edu.pk;F2019266344@umt.edu.pk?subject=Complain"><button class="btn btn-secondary">Mail</button></a></center>
+</div>
+<!--footer -->
+<footer class="footer-16371">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-9 text-center">
+            <div class="footer-site-logo mb-4">
+              <a href="#" style="text-decoration: none;">Customer side</a>
+            </div>
+            <ul class="list-unstyled nav-links mb-5">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Legal</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="social mb-4">
+              <h3>Stay in touch</h3>
+              <ul class="list-unstyled">
+                <li class="in"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="fb"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="tw"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="pin"><a href="#"><span class="icon-pinterest"></span></a></li>
+                <li class="dr"><a href="#"><span class="icon-dribbble"></span></a></li>
+              </ul>
+            </div>
+
+            <div class="copyright">
+              <p class="mb-0"><small>&copy;</small></p>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
+
+
